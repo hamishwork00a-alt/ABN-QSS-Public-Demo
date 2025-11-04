@@ -118,7 +118,7 @@ class MaterialScienceTools:
         }
     
     @staticmethod
-     def plot_material_properties(results: Dict):
+    def plot_material_properties(results: Dict):
         """绘制材料性质图表 - 修复中文显示"""
         def _plot_function():
             if "candidates" in results:
