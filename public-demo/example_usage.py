@@ -91,8 +91,21 @@ def demo_pharma_research():
     
     return docking_results
 
+def demo_health_monitoring():
+    """健康监测系统演示"""
+    print("\n" + "=" * 60)
+    print("🩺 ABN-QSS 健康监测系统演示")
+    print("=" * 60)
+    
+    try:
+        from abn_qss_demo.health_monitoring import demo_health_monitoring as health_demo
+        return health_demo()
+    except ImportError:
+        print("❌ 健康监测模块未找到")
+        return None
+
 def main():
-    """主演示函数"""
+    """主演示函数 - 更新版本"""
     try:
         print("🚀 启动 ABN-QSS 量子增强科研平台演示")
         print("📍 注意: 此为公开演示版本，展示技术潜力")
@@ -103,12 +116,18 @@ def main():
         # 运行药物研发演示  
         pharma_results = demo_pharma_research()
         
+        # 运行健康监测演示
+        health_results = demo_health_monitoring()
+        
         print("\n" + "=" * 60)
-        print("🎉 演示完成!")
+        print("🎉 所有演示完成!")
         print("=" * 60)
-        print("💡 如需完整功能或技术合作，请联系:")
-        print("   📧 research@abn-qss.com")
-        print("   🔗 GitHub: https://github.com/hamishwork00a-alt/ABN-QSS-Public-Demo")
+        print("💡 应用领域:")
+        print("   🔬 材料科学 - 加速新材料发现")
+        print("   💊 药物研发 - 提升筛选效率") 
+        print("   🩺 健康监测 - 无创生理状态感知")
+        print("\n📞 合作咨询: research@abn-qss.com")
+        print("🔗 GitHub: https://github.com/hamishwork00a-alt/ABN-QSS-Public-Demo")
         
     except Exception as e:
         print(f"❌ 演示过程中出现错误: {e}")
