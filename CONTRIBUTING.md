@@ -47,7 +47,7 @@ python -m pytest tests/ -v
 
 # 4. 验证示例
 python example_usage.py
-
+```
 测试要求
 
 · 新功能必须包含测试用例
@@ -80,7 +80,7 @@ public-demo/
 · 合作发表研究成果
 · 获得完整版本访问权限
 
-请联系: research@abn-qss.com
+请联系: landsingchang@gamail.com
 
 📄 许可证
 
