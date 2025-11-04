@@ -1,13 +1,15 @@
 # 在文件开头添加导入
+from typing import Dict, List, Optional  # 添加这行导入
 from .font_utils import safe_plot_with_chinese, setup_chinese_font
 
 # 修改 MaterialScienceTools 类中的 plot_material_properties 方法
 class MaterialScienceTools:
     """材料科学工具集"""
-    
+
     @staticmethod
-    def plot_material_properties(results: Dict):
+    def plot_material_properties(results: Dict):  # 现在 Dict 已定义
         """绘制材料性质图表 - 修复中文显示"""
+        # ... 其余代码保持不变
         def _plot_function():
             if "candidates" in results:
                 materials = [c["material_id"] for c in results["candidates"]]
