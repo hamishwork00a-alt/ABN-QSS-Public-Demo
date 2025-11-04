@@ -40,13 +40,24 @@ class HealthMonitoringSystem:
         
         self.baseline_state = {
             "network_structure": baseline_network,
-            "dynamic_range": self._calculate_dynamic_ranges(user_data),
+            "dynamic_range": self._calculate_dynamic_ranges(user_data),  # 修复：添加这个方法
             "resilience_score": np.random.uniform(0.85, 0.95),
             "harmony_index": np.random.uniform(0.88, 0.98)
         }
         
         print("✅ 健康基态已建立")
         return self.baseline_state
+    
+    def _calculate_dynamic_ranges(self, user_data: Dict) -> Dict:
+        """计算生理参数的动态范围 - 新增方法"""
+        return {
+            "heart_rate": {"min": 60, "max": 100, "optimal": user_data.get("heart_rate", 72)},
+            "hrv": {"min": 20, "max": 80, "optimal": user_data.get("hrv", 45)},
+            "blood_oxygen": {"min": 92, "max": 100, "optimal": user_data.get("blood_oxygen", 98)},
+            "skin_conductance": {"min": 1.0, "max": 5.0, "optimal": user_data.get("skin_conductance", 2.5)},
+            "temperature": {"min": 36.0, "max": 37.5, "optimal": user_data.get("temperature", 36.8)},
+            "impedance": {"min": 450, "max": 550, "optimal": user_data.get("impedance", 480)}
+        }
     
     def real_time_monitoring(self, current_metrics: Dict) -> Dict:
         """实时健康状态监测"""
