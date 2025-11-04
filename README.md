@@ -12,14 +12,49 @@
 - 📊 **科研友好接口** - 自然语言输入，可解释输出
 - 🔧 **模块化设计** - 按需使用，灵活集成
 
+## Suggestion for an eviroment preparation
+
+### Create an environment using venv
+
+#### Open a terminal and navigate to your project folder.
+```bash
+cd myproject
+```
+
+#### In your terminal, type:
+```bash
+python -m venv abn_qss_env
+```
+A folder named "abn_qss_env" will appear in your project. This directory is where your virtual environment and its dependencies are installed.
+
+### Activate your environment
+
+In your terminal, activate your environment with one of the following commands, depending on your operating system.
+#### Windows command prompt
+```bash
+abn_qss_env\Scripts\activate.bat
+```
+#### Windows PowerShell
+```bash
+abn_qss_env\Scripts\Activate.ps1
+```
+#### macOS and Linux
+```bash
+source abn_qss_env/bin/activate
+```
+
 ## 🎯 快速开始
 
 ### 安装
 
 ```bash
 git clone https://github.com/hamishwork00a-alt/ABN-QSS-Public-Demo.git
+```
+```bash
 cd ABN-QSS-Public-Demo/public-demo
-pip install -r requirements.txtQuantum-Enhanced Scientific Computing Platform - Public Demo
+pip install -r requirements.txt
+```
+
 基础演示
 
 ```python
