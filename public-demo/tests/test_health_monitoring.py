@@ -29,7 +29,14 @@ class TestHealthMonitoring(unittest.TestCase):
         
         self.assertIn("network_structure", baseline)
         self.assertIn("resilience_score", baseline)
+        self.assertIn("dynamic_range", baseline)  # 新增检查
         self.assertGreater(baseline["resilience_score"], 0.5)
+    
+    def test_dynamic_range_calculation(self):
+        """测试动态范围计算"""
+        self.health_system.initialize_baseline(self.baseline_data)
+        # 验证dynamic_range方法存在
+        self.assertTrue(hasattr(self.health_system, '_calculate_dynamic_ranges'))
     
     def test_real_time_monitoring(self):
         """测试实时监测"""
@@ -67,5 +74,10 @@ class TestMetabolicMirror(unittest.TestCase):
         self.assertIn("lactate_level", result)
         self.assertIn("metabolic_flexibility", result)
 
+def run_health_tests():
+    """运行健康监测测试"""
+    print("🧪 运行健康监测测试套件...")
+    unittest.main(verbosity=2, exit=False)
+
 if __name__ == "__main__":
-    unittest.main()
+    run_health_tests()
