@@ -47,3 +47,52 @@ python -m pytest tests/ -v
 
 # 4. 验证示例
 python example_usage.py
+
+测试要求
+
+· 新功能必须包含测试用例
+· 确保测试覆盖率不降低
+· 所有测试必须在Python 3.8+环境下通过
+
+📝 Pull Request 流程
+
+1. 确保更改目标正确: 针对 develop 分支
+2. 添加测试: 新功能必须包含测试用例
+3. 更新文档: 相应更新README和API文档
+4. 通过CI: 确保所有GitHub Actions检查通过
+5. 代码审查: 等待维护者审查和反馈
+
+🎨 项目结构
+
+```text
+public-demo/
+├── abn_qss_demo/     # 核心演示代码
+├── tests/            # 测试用例
+├── docs/             # 文档
+└── examples/         # 使用示例
+```
+
+🔬 研究合作
+
+如果您是科研人员并希望：
+
+· 在特定领域应用ABN-QSS
+· 合作发表研究成果
+· 获得完整版本访问权限
+
+请联系: research@abn-qss.com
+
+📄 许可证
+
+通过贡献代码，您同意您的贡献将在MIT许可证下发布。
+
+💬 沟通渠道
+
+· GitHub Issues: 技术问题和功能请求
+· Email: landsingchang@gmail.com (研究合作)
+· LinkedIn: ABN-QSS技术平台
+
+---
+
+感谢您的贡献！🎉
+
