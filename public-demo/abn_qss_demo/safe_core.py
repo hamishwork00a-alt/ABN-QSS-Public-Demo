@@ -4,7 +4,7 @@ ABN-QSS 安全核心模块 - 公开演示版本
 """
 import numpy as np
 import matplotlib.pyplot as plt
-from typing import Dict, List, Any
+from typing import Dict, List, Optional, Any, Union  # 添加这行
 from dataclasses import dataclass
 from .font_utils import safe_plot_with_chinese, setup_chinese_font
 
