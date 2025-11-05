@@ -112,6 +112,7 @@ drug_candidates = tools.quantum_docking_screen(
     compound_library="zinc20_subset"
 )
 ```
+
 ### 健康监测
 ```python
 from abn_qss_demo.health_monitoring import HealthMonitoringSystem
@@ -122,7 +123,55 @@ baseline = system.initialize_baseline(user_data)
 current_state = system.real_time_monitoring(current_metrics)
 
 print(f"系统和谐度: {current_state['system_harmony']}")
+```python
+# test_fix.py - 验证修复
+import sys
+import os
+sys.path.append('.')
+
+try:
+    from abn_qss_demo import HealthMonitoringSystem, MetabolicMirror
+    print("✅ 导入成功！")
+    
+    # 测试健康监测系统
+    health_system = HealthMonitoringSystem()
+    
+    # 测试基线建立
+    baseline_data = {
+        "heart_rate": 72,
+        "hrv": 45,
+        "blood_oxygen": 98,
+        "skin_conductance": 2.5,
+        "temperature": 36.8,
+        "impedance": 480
+    }
+    
+    baseline = health_system.initialize_baseline(baseline_data)
+    print(f"✅ 基线建立: 韧性={baseline['resilience_score']:.3f}")
+    
+    # 测试实时监测
+    current_data = {
+        "heart_rate": 78,
+        "hrv": 38,
+        "blood_oxygen": 96,
+        "skin_conductance": 3.2,
+        "temperature": 36.9,
+        "impedance": 475
+    }
+    
+    current_state = health_system.real_time_monitoring(current_data)
+    print(f"✅ 实时监测: 和谐度={current_state['system_harmony']:.3f}")
+    
+    # 测试代谢分析
+    metabolic_analysis = MetabolicMirror.non_invasive_metabolic_analysis(current_data)
+    print(f"✅ 代谢分析: 血糖={metabolic_analysis['glucose_trend']['value']}")
+    
+    print("🎉 所有修复验证通过！")
+    
+except Exception as e:
+    print(f"❌ 修复验证失败: {e}")
 ```
+
 应用场景：
 
 · 无创代谢监测（血糖、乳酸、酮体）
