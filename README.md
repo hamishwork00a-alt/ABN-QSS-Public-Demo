@@ -123,6 +123,8 @@ baseline = system.initialize_baseline(user_data)
 current_state = system.real_time_monitoring(current_metrics)
 
 print(f"系统和谐度: {current_state['system_harmony']}")
+```
+
 ```python
 # test_fix.py - 验证修复
 import sys
