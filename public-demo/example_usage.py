@@ -9,7 +9,8 @@ import os
 # 添加当前目录到路径
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from abn_qss_demo import QuantumResearchPlatform, MaterialScienceTools, PharmaResearchTools
+from abn_qss_demo.health_monitoring import HealthMonitoringSystem, MetabolicMirror
+from abn_qss_demo.safe_core import QuantumResearchPlatform, MaterialScienceTools, PharmaResearchTools
 
 def demo_material_science():
     """材料科学演示"""
@@ -126,7 +127,7 @@ def main():
         print("   🔬 材料科学 - 加速新材料发现")
         print("   💊 药物研发 - 提升筛选效率") 
         print("   🩺 健康监测 - 无创生理状态感知")
-        print("\n📞 合作咨询: research@abn-qss.com")
+        print("\n📞 合作咨询: landsingchang@gmail.com")
         print("🔗 GitHub: https://github.com/hamishwork00a-alt/ABN-QSS-Public-Demo")
         
     except Exception as e:
